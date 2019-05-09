@@ -7,7 +7,7 @@
   "author": "Abhishek Sarolia",
   "license": "MIT",
   "dependencies": {
-    "whatwg-fetch": "3.0.0"
+
   },
   "devDependencies": {
     "babel-cli": "*",
