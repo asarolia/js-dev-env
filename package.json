@@ -1,0 +1,47 @@
+{
+  "name": "javascript-development-environment",
+  "version": "1.0.0",
+  "description": "JavaScript development environment dependencies",
+  "scripts": {
+  },
+  "author": "Abhishek Sarolia",
+  "license": "MIT",
+  "dependencies": {
+    "whatwg-fetch": "3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-latest": "*",
+    "babel-register": "*",
+    "chai": "*",
+    "chalk": "*",
+    "cheerio": "*",
+    "compression": "*",
+    "cross-env": "*",
+    "css-loader": "*",
+    "eslint": "*",
+    "eslint-plugin-import": "*",
+    "eslint-watch": "*",
+    "express": "*",
+    "extract-text-webpack-plugin": "*",
+    "html-webpack-plugin": "*",
+    "jsdom": "*",
+    "json-schema-faker": "*",
+    "json-server": "*",
+    "localtunnel": "*",
+    "mocha": "*",
+    "nock": "*",
+    "npm-run-all": "*",
+    "nsp": "*",
+    "numeral": "*",
+    "open": "*",
+    "rimraf": "*",
+    "style-loader": "*",
+    "webpack": "*",
+    "webpack-dev-middleware": "*",
+    "webpack-hot-middleware": "*",
+    "webpack-md5-hash": "*"
+  }
+}
