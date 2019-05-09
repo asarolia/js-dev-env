@@ -4,6 +4,8 @@
 var Express = require('express');
 // step 2 Get the Path module API
 var Path = require('path');
+// step 3 Import Open module API
+var open = require('open');
 // define listen port
 var PORT = 3000;
 
@@ -35,6 +37,10 @@ app.listen(PORT, (err)=>{
     console.log("Server encountered some error :"+err);
 
   }else {
+
+    // Now, if we want browser window to automatically open when server is created, we can utilize OPen
+    open('http://localhost:'+PORT);
+
     console.log(`Express server listening on ${PORT}`);
   }
 

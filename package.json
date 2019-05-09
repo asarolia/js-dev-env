@@ -6,7 +6,7 @@
     "prebuild":"node buildScripts/startProcess.js",
     "build":" npm-run-all --parallel srcscript localtunnel",
     "srcscript": "node buildScripts/srcServer.js",
-    "localtunnel":"lt --port 3000"
+    "localtunnel":"lt --port 3000 --subdomain abhi"
   },
   "author": "Abhishek Sarolia",
   "license": "MIT",
