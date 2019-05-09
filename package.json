@@ -2,7 +2,12 @@
   "name": "javascript-development-environment",
   "version": "1.0.0",
   "description": "JavaScript development environment dependencies",
-  "scripts": {},
+  "scripts": {
+    "prebuild":"node buildScripts/startProcess.js",
+    "build":" npm-run-all --parallel srcscript localtunnel",
+    "srcscript": "node buildScripts/srcServer.js",
+    "localtunnel":"lt --port 3000"
+  },
   "author": "Abhishek Sarolia",
   "license": "MIT",
   "dependencies": {
