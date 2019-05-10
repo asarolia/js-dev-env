@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "JavaScript development environment dependencies",
   "scripts": {
-    "prebuild":"node buildScripts/startProcess.js",
-    "build":" npm-run-all --parallel srcscript localtunnel",
-    "srcscript": "node buildScripts/srcServer.js",
-    "localtunnel":"lt --port 3000 --subdomain abhi"
+    "prebuild": "npm-run-all --parallel transpile:src",
+    "transpile:src":"babel buildScripts/*.js --out-dir lib",
+    "startProcess":"node lib/startProcess.js",
+    "build": " npm-run-all --parallel startProcess srcscript localtunnel endProcess",
+    "endProcess":"node lib/endProcess.js",
+    "srcscript": "node lib/srcServer.js",
+    "localtunnel": "lt --port 3000 --subdomain abhi"
   },
   "author": "Abhishek Sarolia",
   "license": "MIT",
@@ -16,8 +19,8 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "babel-loader": "^8.0.4",
-    "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "chalk": "^2.4.1",

@@ -1,17 +1,30 @@
 // Source file to create express server and relay webpage
 
+// Once Babel is configured we can change the CommonJS pattern to ES6
+
+// CommonJS pattern
+// // step 1 . Get the Express module API
+// var express = require('express');
+// // step 2 Get the Path module API
+// var path = require('path');
+// // step 3 Import Open module API
+// var open = require('open');
+
+// ES6 pattern
 // step 1 . Get the Express module API
-var Express = require('express');
+import express from 'express';
 // step 2 Get the Path module API
-var Path = require('path');
+import path from 'path';
 // step 3 Import Open module API
-var open = require('open');
+import open from 'open';
+
 // define listen port
 var PORT = 3000;
 
 // step3 , create Express instance
 
-var app = Express();
+var app = express();
+
 
 // create callback here for server request
 
@@ -21,7 +34,7 @@ let processRequest = (req,res) => {
   //  res.send("Hello Node from Express!");
 
   // If we want to return file then use Path module API and res.sendFile()
-  res.sendFile(Path.join(__dirname,'../src/index.html'));
+  res.sendFile(path.join(__dirname,'../src/index.html'));
 
 }
 
